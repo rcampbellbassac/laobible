@@ -1,15 +1,23 @@
 <template>
 <div id="app" class="container">
+  <br>
 
-  <div class="alert alert-info" role="alert" style="margin-top: 1em;">
+  <div v-if="!complete" class="alert alert-info" role="alert">
     <p>{{message}}</p>
   </div>
 
-  <router-view />
+  <div v-if="showErr" class="alert alert-warn" role="alert">
+    <p>{{error}}</p>
+  </div>
+
+  <router-view class="view" />
 
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="#">LaoBible Web App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false"
+    aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -36,37 +44,55 @@ export default {
   data() {
     return {
       message: 'Loading...',
-      uploadPercentage: 0,
+      complete: false,
+      error: "",
+      showErr: false,
     };
   },
   methods: {
     setMsg(msg) {
       this.message = msg;
     },
+    setErr(msg) {
+      this.error = msg;
+      this.complete = true;
+      this.showErr = true;
+    }
   },
   mounted() {
-    localforage.getItem('data').then((value) => {
-      if (value) {
-        this.setMsg('Welcome back! Loading data...');
-
-      } else {
-        this.setMsg('Welcome! Installing data...');
+    localforage.getItem('LaoBible').then((value) => {
+      if (value === null) {
+        this.setMsg('Initial loading... Please wait.');
       }
-      this.$store.dispatch('initdata');
+      this.setMsg('Welcome! Installing data...');
+      this.$store.dispatch('initdata').then(() => {
+        this.complete = true;
+      });
     }).catch((err) => {
       const newmsg = `Installation failed! ${err}`;
-      this.setMsg(newmsg);
+      this.setErr(newmsg);
     });
   },
 };
 </script>
 
 <style lang="scss">
+$body-bg: #eceff1;
+$body-color: #000;
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>
 
 <style>
+.view {
+  margin-bottom: 5rem;
+}
+
+.alert {
+  margin-top: 2rem;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
