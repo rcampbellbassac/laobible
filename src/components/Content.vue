@@ -29,20 +29,19 @@ export default {
   computed: {
     book() {
       // Get book information
-      const result = this.$store.state.data.unit.filter(book => book.id == Number(this.bk));
+      const result = this.$store.state.data.unit.filter(book => book.id === Number(this.bk));
       return result[0];
     },
     chapter() {
       // Get book information
       const mybk = Number(this.bk);
       const mych = Number(this.ch);
-      const book = this.$store.state.data.unit.filter(book => book.id == mybk);
-      if(book.length > 0) {
-        const result = book[0].contents.filter(chapter => chapter.id == mych)
+      const fbook = this.$store.state.data.unit.filter(book => book.id === mybk);
+      if (fbook.length > 0) {
+        const result = fbook[0].contents.filter(chapter => chapter.id === mych);
         return result[0];
-      } else {
-        return {};
       }
+      return {};
     },
   },
 };
