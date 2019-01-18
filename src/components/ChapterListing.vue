@@ -8,7 +8,7 @@
       Back
     </router-link>
     <div class="list-group">
-      <div v-for="chapter in book.contents">
+      <div v-for="chapter in book.contents" :key="chapter.id">
         <router-link class="list-group-item list-group-item-action"
         :to="{name: 'content', params: {bk: String(book.id), ch: String(chapter.id)}}">
           <span v-html="chapter.name"></span>
@@ -31,9 +31,9 @@ export default {
     book() {
       // Get book information
       const mybk = Number(this.bk);
-      const result = this.$store.state.data.unit.filter(book => book.id == mybk);
+      const result = this.$store.state.data.unit.filter(book => book.id === mybk);
       return result[0];
-    }
+    },
   },
 };
 </script>
