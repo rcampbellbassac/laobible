@@ -8,11 +8,17 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import data from '@/data/LaoBible.json';
 
 export default {
   name: 'home',
   components: {
     HelloWorld,
+  },
+  data: function () {
+    return {
+      master: data
+    }
   },
 };
 </script>
