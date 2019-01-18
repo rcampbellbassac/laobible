@@ -45,7 +45,7 @@ export default {
     return {
       message: 'Loading...',
       complete: false,
-      error: "",
+      error: '',
       showErr: false,
     };
   },
@@ -57,7 +57,7 @@ export default {
       this.error = msg;
       this.complete = true;
       this.showErr = true;
-    }
+    },
   },
   mounted() {
     localforage.getItem('LaoBible').then((value) => {
