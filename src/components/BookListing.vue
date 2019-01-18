@@ -8,7 +8,7 @@
       Back
     </router-link>
     <div class="list-group">
-      <router-link v-for="book in books"
+      <router-link v-for="book in books"  :key="book.id"
       :to="{ name: 'chapters', params: { bk: String(book.id) }}"
       class="list-group-item list-group-item-action">
         <span v-html="book.name"></span>
