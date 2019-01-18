@@ -1,6 +1,6 @@
 <template>
   <div class="booklisting">
-    <h1>Listing</h1>
+    <h1 class="text-primary">{{this.$store.state.data.title}}</h1>
     <router-link class="btn btn-primary backbtn" to="/">
       <i class="material-icons">
         arrow_back
@@ -9,7 +9,7 @@
     </router-link>
     <div class="list-group">
       <router-link v-for="book in books"
-      :to="{ name: 'chapters', params: { bk: book.id }}"
+      :to="{ name: 'chapters', params: { bk: String(book.id) }}"
       class="list-group-item list-group-item-action">
         <span v-html="book.name"></span>
       </router-link>
