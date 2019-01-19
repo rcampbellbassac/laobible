@@ -29,8 +29,19 @@ export default new Vuex.Store({
           commit('LOAD', localstoragedata);
         } else {
           try {
-            const initdata = require('@/data/LaoBible.json'); // eslint-disable-line global-require
-            localforage.setItem('LaoBible', initdata).then(commit('LOAD', initdata));
+            // Content URLs
+            // https://sea-sda.org/data/LaoBible.json
+            // https://sea-sda.org/data/LaoBibleStudies.json
+            // https://sea-sda.org/data/LaoEGW.json
+            // https://sea-sda.org/data/LaoHealthBooks.json
+            // https://sea-sda.org/data/LaoSongs.json
+            fetch('https://sea-sda.org/data/LaoBible.json')
+              .then((response) => {
+                localforage.setItem('LaoBible', response).then(commit('LOAD', response));
+              });
+            // const initdata = require('@/data/LaoBible.json');
+            // eslint-disable-line global-require
+            // localforage.setItem('LaoBible', initdata).then(commit('LOAD', initdata));
           } catch (e) {
             commit('ERROR', { title: 'Failed to load inital data.', error: e });
           }
