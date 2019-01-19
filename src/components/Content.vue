@@ -8,6 +8,12 @@
       Back
     </router-link>
     <div class="card">
+      <a v-if="chapter.audiourl != ''" class="btn btn-primary" :href="chapter.audiourl" target="_blank">
+        <i class="material-icons">
+          queue_music
+        </i>
+        ຟັງ / Listen
+      </a>
       <div class="card-body" v-html="chapter.content"/>
     </div>
   </div>
