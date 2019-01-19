@@ -36,7 +36,7 @@ export default {
 
 <style>
   .logo {
-    max-width: 80%;
+    max-width: 50%;
   }
   .action {
     margin-top: 2rem;
