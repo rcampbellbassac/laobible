@@ -17,7 +17,11 @@
   <router-view class="view" />
 
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">LaoBible Web App</a>
+    <a class="navbar-brand" href="#">Lao Bible Web App</a>
+    <!-- <a class="navbar-brand" href="#">Lao Bible Studies Web App</a> -->
+    <!-- <a class="navbar-brand" href="#">Lao Health Books Web App</a> -->
+    <!-- <a class="navbar-brand" href="#">Lao Ellen G White Books Web App</a> -->
+    <!-- <a class="navbar-brand" href="#">Lao Songs Web App</a> -->
     <button class="navbar-toggler" type="button"
     data-toggle="collapse" data-target="#navbarCollapse"
     aria-controls="navbarCollapse" aria-expanded="false"
@@ -88,9 +92,20 @@ export default {
 };
 </script>
 
+<!--
+- Primary Colors for Apps -
+LB - Lao Bible - #ff9800
+LBS - Lao Bible Studies - #4527a0
+EGW - Lao Ellen G White Books - #5d4037
+HB - Lao Health Books - #558b2f
+LS - Lao Songs - #00695c
+ -->
+
 <style lang="scss">
-$body-bg: #eceff1;
-$body-color: #000;
+$primary: #ff9800;
+$secondary: #2962ff;
+$body-bg: #eeeeee;
+$body-color: #212121;
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
