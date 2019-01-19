@@ -10,6 +10,10 @@
     <p>{{error}}</p>
   </div>
 
+  <div v-if="installing" class="alert alert-info" role="alert">
+    <p>Data installing... This may take a few minutes.</p>
+  </div>
+
   <router-view class="view" />
 
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
@@ -48,6 +52,14 @@ export default {
       error: '',
       showErr: false,
     };
+  },
+  computed: {
+    installing() {
+      return this.$store.state.installing;
+    },
+    loading() {
+      return this.$store.state.loading;
+    },
   },
   methods: {
     setMsg(msg) {

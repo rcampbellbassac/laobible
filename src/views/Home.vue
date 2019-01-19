@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <div>
+    <div v-if="!loading && !installing">
       <h1 class="text-primary" v-html="name"></h1>
       <div class="text-secondary" v-html="description"></div>
     </div>
-    <img class="logo" src="@/assets/bible.jpg"
+    <img v-if="!installing" class="logo" src="@/assets/bible.jpg"
     alt="Photo of the Bible by David Ball: www.davidball.net, CC BY 2.5, https://creativecommons.org/licenses/by/2.5/deed.en"/>
-    <div class="action">
+    <div class="action" v-if="!loading && !installing">
       <router-link class="btn btn-primary" to="/read">ເປີດ / Open</router-link>
     </div>
   </div>
@@ -23,6 +23,12 @@ export default {
     },
     description() {
       return this.$store.state.data.description;
+    },
+    installing() {
+      return this.$store.state.installing;
+    },
+    loading() {
+      return this.$store.state.loading;
     },
   },
 };
