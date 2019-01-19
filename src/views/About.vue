@@ -3,34 +3,42 @@
     <h1>About Us</h1>
 
     <p>
-      The last iteration of the LaoBible app, crafted from the
+      The last iteration of the Lao Books series apps,
+      crafted from sources like
       <a href="http://laobible.net/" target="_blank">
         LaoBible.net
         <i class="material-icons">
           open_in_new
         </i>
-      </a>
-      content has now come as a sleek, minimal progressive web app. It supports
-      offile use. It's easy to navigte. It's simple. And, it comes as a result of
-      technological and accessbility advances in Lao. Now that Lao can be easily
-      created, accessed, and shared online - the first app to ever published in
-      Lao without using 'invisble spaces', is now being retired. No more
-      development will be performed. It will remain here, as long as it is still
-      used by some.
+      </a> and the
+      <a href="http://www.adventist.la/" target="_blank">
+        Lao Seventh-day Adventist Church
+        <i class="material-icons">
+          open_in_new
+        </i>
+      </a>,
+      now come as sleek, minimal progressive web apps. They support
+      offile use. They are easy to navigte. They are simple.
+      And, they come as a result of technological and accessbility advances in
+      Lao. Now that Lao can be easily created, accessed, and shared online -
+      the first Android apps to ever published in Lao without using
+      'invisble spaces', are now here in their latest form. They will remain
+      here free to access and use.
     </p>
 
-    <p><strong>Now there are 2 options:</strong></p>
+    <p><em>Specifically for the Lao Bible...</em></p>
+
+    <p><strong>There are 2 options:</strong></p>
 
     <p>
       <ul class="list-group">
         <li class="list-group-item">
-          The LaoBible Web App - which you are now using
+          <a href="https://laobible.sea-sda.org">The LaoBible Web App</a>
         </li>
         <li class="list-group-item">
-          The Lao Revised Version - which you can install
           <a href="https://play.google.com/store/apps/details?id=org.ubs.lao.rlv"
           target="_blank">
-          here
+          The Lao Revised Version
           <i class="material-icons">
             open_in_new
           </i>
