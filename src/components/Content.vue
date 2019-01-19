@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <router-link class="btn btn-primary backbtn"
-    :to="{name: 'chapters', params: {bk: Number(bk)}}">
+    :to="{name: 'chapters', params: {bk: String(bk)}}">
       <i class="material-icons">
         arrow_back
       </i>
