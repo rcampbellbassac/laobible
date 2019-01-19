@@ -40,11 +40,11 @@ export default new Vuex.Store({
           try {
             this.state.installing = true;
             // Content URLs
-            // https://sea-sda.org/data/LaoBible.json - LB
-            // https://sea-sda.org/data/LaoBibleStudies.json - LBS
-            // https://sea-sda.org/data/LaoEGW.json - EGW
-            // https://sea-sda.org/data/LaoHealthBooks.json - HB
-            // https://sea-sda.org/data/LaoSongs.json - LS
+            // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoBible.json - LB
+            // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoBibleStudies.json - LBS
+            // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoEGW.json - EGW
+            // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoHealthBooks.json - HB
+            // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoSongs.json - LS
             fetch('https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoBible.json')
               .then(response => response.json())
               .then(async (responseJSON) => {
