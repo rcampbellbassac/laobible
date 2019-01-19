@@ -45,7 +45,7 @@ export default new Vuex.Store({
             // https://sea-sda.org/data/LaoEGW.json - EGW
             // https://sea-sda.org/data/LaoHealthBooks.json - HB
             // https://sea-sda.org/data/LaoSongs.json - LS
-            fetch('https://sea-sda.org/data/LaoBible.json')
+            fetch('https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoBible.json')
               .then(response => response.json())
               .then(async (responseJSON) => {
                 await localforage.setItem('LaoBible', responseJSON)
