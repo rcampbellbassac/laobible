@@ -4,7 +4,7 @@
       <h1 class="text-primary" v-html="name"></h1>
       <div class="text-secondary" v-html="description"></div>
     </div>
-    <img v-if="!installing" class="logo" src="@/assets/bible.jpg"
+    <img v-if="!installing" class="logo" src="https://s3-us-west-2.amazonaws.com/laoadventist-media/bible.webp"
     alt="Photo of the Bible by David Ball: www.davidball.net, CC BY 2.5, https://creativecommons.org/licenses/by/2.5/deed.en"/>
     <div class="action" v-if="!loading && !installing">
       <router-link class="btn btn-primary" to="/read">ເປີດ / Open</router-link>
