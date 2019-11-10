@@ -18,11 +18,11 @@
         </i>
       </a>,
       now come as sleek, minimal progressive web apps. They support
-      offile use. They are easy to navigte. They are simple.
-      And, they come as a result of technological and accessbility advances in
+      offline use. They are easy to navigate. They are simple.
+      And, they come as a result of technological and accessibility advances in
       Lao. Now that Lao can be easily created, accessed, and shared online -
       the first Android apps to ever published in Lao without using
-      'invisble spaces', are now here in their latest form. They will remain
+      'invisible spaces', are now here in their latest form. They will remain
       here free to access and use.
     </p>
 
