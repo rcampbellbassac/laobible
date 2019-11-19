@@ -85,7 +85,7 @@ export default {
         this.complete = true;
       });
     }).catch((err) => {
-      const newmsg = `Installation failed! ${err}`;
+      const newmsg = (`Installation failed! ${err}`);
       this.setErr(newmsg);
     });
   },

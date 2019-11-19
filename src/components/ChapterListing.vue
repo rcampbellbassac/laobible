@@ -31,7 +31,7 @@ export default {
     book() {
       // Get book information
       const mybk = Number(this.bk);
-      const result = this.$store.state.data.unit.filter(book => book.id === mybk);
+      const result = this.$store.state.data.unit.filter((book) => (book.id === mybk));
       return result[0];
     },
   },
